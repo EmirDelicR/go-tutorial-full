@@ -42,6 +42,12 @@ Reload files:
 
 reloading your profile files with. /etc/profile and . ~/.profile, or just restart.
 
+Run this to confirm installation:
+
+```console
+go version
+```
+
 ### Resource
 
 [Go Documentation](https://go.dev/doc/)
