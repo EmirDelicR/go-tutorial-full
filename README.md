@@ -52,6 +52,45 @@ if you see the version of go then all is ok.
 
 To test if all is working follow this tutorial [Go Example tutorial](https://go.dev/doc/tutorial/getting-started)
 
+#### Example recap
+
+create a folder with some name (example hello) and cd into that folder:
+
+run:
+
+```console
+go mod init example/hello
+ ```
+
+this will create go.mod file. When your code imports packages contained in other modules, you manage those dependencies through your code's own module. That module is defined by a go.mod file that tracks the modules that provide those packages. That go.mod file stays with your code, including in your source code repository. 
+
+
+run:
+
+```console
+touch hello.go
+```
+
+Open file and paste:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+
+run:
+
+```console 
+go run .
+// or
+go run hello.go
+```
+
 ### Resource
 
 [Go Documentation](https://go.dev/doc/)

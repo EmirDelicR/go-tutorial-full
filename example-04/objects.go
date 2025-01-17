@@ -1,0 +1,1 @@
+// https://www.openmymind.net/assets/go/go.pdf 
