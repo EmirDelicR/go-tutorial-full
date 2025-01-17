@@ -14,15 +14,35 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.3.linux-amd64.ta
 Now add the following to your /etc/profile for a system-wide install:
 
 ```console
-sudo sh -c "echo export PATH=$PATH:/usr/local/go/bin >> /etc/profile"
+sudo sh -c "echo 'export PATH=\$PATH:/usr/local/go/bin' >> /etc/profile"
 ```
 
+Open /etc/profile file and this should be appended
+
 ```console
-# system-wide Go install
 export PATH=$PATH:/usr/local/go/bin
 ```
 
+if you make a mistake you can always use nano:
 
+```console
+sudo nano /etc/profile
+```
+
+The next step is  in ~/.profile
+
+```bash 
+# set PATH so it includes GOPATH/bin if it exists
+if [ -x "$(command -v go)" ] && [ -d "$(go env GOPATH)/bin" ]; then
+    PATH="$(go env GOPATH)/bin:$PATH"
+fi
+```
+
+Reload files:
+
+reloading your profile files with. /etc/profile and . ~/.profile, or just restart.
+
+### Resource
 
 [Go Documentation](https://go.dev/doc/)
 
