@@ -48,6 +48,10 @@ Run this to confirm installation:
 go version
 ```
 
+if you see the version of go then all is ok. 
+
+To test if all is working follow this tutorial [Go Example tutorial](https://go.dev/doc/tutorial/getting-started)
+
 ### Resource
 
 [Go Documentation](https://go.dev/doc/)
